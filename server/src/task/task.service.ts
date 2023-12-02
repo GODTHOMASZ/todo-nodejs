@@ -27,9 +27,9 @@ export class TaskService {
 
   async findAll(id: number) {
     return await this.taskRepository.find({
-      where: {
-        responsible: { id }
-      },
+      where: [
+        {owner: { id }}, {responsible: { id }}
+      ],
       relations: {
         owner: true,
         responsible: true
