@@ -1,0 +1,18 @@
+<svg width="26" height="30" viewBox="0 0 26 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>logo</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-9681 -4828)">
+<g id="logo">
+<g id="Polygon">
+<use xlink:href="#path0_fill" transform="matrix(1 0 0 -1 9681 4858)" fill="#0091EA"/>
+</g>
+<g id="path16_fill">
+<use xlink:href="#path1_fill" transform="translate(9683.17 4829.98)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+<defs>
+<path id="path0_fill" fill-rule="evenodd" d="M 12.9904 0L 25.9808 7.5L 25.9804 22.5L 12.9904 30L 7.93222e-15 22.5L -3.60556e-16 7.5L 12.9904 0Z"/>
+<path id="path1_fill" d="M 12.975 3.75L 10.8 0L 0 6.3L 10.8 25.05L 21.675 18.75L 19.5 15L 12.975 18.75L 10.8 15L 17.325 11.25L 15.15 7.5L 8.625 11.25L 6.45 7.5L 12.975 3.75Z"/>
+</defs>
+</svg>
