@@ -5,14 +5,12 @@ import { toast } from 'react-toastify'
 import { setTokenToLocalStorage } from '../helpers/localstorage.helper'
 import { useAppDispatch } from '../store/hooks'
 import { logIn } from '../store/user/userSlice'
-import { useNavigate } from 'react-router-dom'
-
 
 const Login: FC = () => {
     const [login, setLogin] = useState<string>('')
     const [password, setPassword] = useState<string>('')
     const dispatch = useAppDispatch()
-    const navigate = useNavigate()
+
     
     const loginHandler = async (e: React.FormEvent<HTMLFormElement>) => {
         try {
@@ -22,7 +20,7 @@ const Login: FC = () => {
                 setTokenToLocalStorage('token', data.token)
                 dispatch(logIn(data))
                 toast.success('Вход успешно выполнен')
-                navigate('/')
+                window.location.href = '/'
             }
         } catch (err: any) {
             const error = err.response?.data.message

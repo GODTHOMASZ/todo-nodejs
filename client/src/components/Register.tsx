@@ -2,30 +2,26 @@ import React from 'react'
 import { FC, useState } from "react"
 import { AuthService } from "../services/auth.service"
 import { toast } from 'react-toastify'
-import { setTokenToLocalStorage } from '../helpers/localstorage.helper'
-import { useAppDispatch } from '../store/hooks'
-import { logIn } from '../store/user/userSlice'
-import { useNavigate } from 'react-router-dom'
 
-const Register: FC = () => {
+interface Props {
+    setIsLogin: (isLogin: boolean) => void
+} 
+
+const Register: FC<Props> = ({setIsLogin}) => {
     const [name, setName] = useState<string>('')
     const [surname, setSurname] = useState<string>('')
     const [middlename, setMiddlename] = useState<string>('')
     const [login, setLogin] = useState<string>('')
     const [password, setPassword] = useState<string>('')
-    const dispatch = useAppDispatch()
-    const navigate = useNavigate()
+ 
     
     const registrationHandler = async (e: React.FormEvent<HTMLFormElement>) => {
         try {
             e.preventDefault()
             const data = await AuthService.registration({name, surname, middlename, login, password})
             if (data) {
-                setTokenToLocalStorage('token', data.token)
-                console.log(data)
-                dispatch(logIn(data))
                 toast.success('Аккаунт создан')
-                navigate('/')
+                setIsLogin(true)
             }
         } catch (err: any) {
             const error = err.response?.data.message
