@@ -149,6 +149,7 @@ const Tasks: FC = () => {
       </div>
       { 
         (visibleModal && ( !isPatch ? <ModalTasks type='post' setVisibleModal={setVisibleModal} task={null} subordinates={subordinates} /> :
+          //@ts-ignore
           <ModalTasks type='patch' id={taskId} setVisibleModal={setVisibleModal} task={tasks.find(tasks => tasks.id == taskId)} subordinates={subordinates} />
           )
         )

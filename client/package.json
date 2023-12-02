@@ -12,6 +12,7 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.7",
     "@tailwindcss/postcss7-compat": "^2.2.17",
+    "@types/dateformat": "^5.0.2",
     "axios": "^1.6.2",
     "dateformat": "^5.0.3",
     "localforage": "^1.10.0",

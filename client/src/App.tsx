@@ -1,4 +1,4 @@
-import { RouterProvider, useNavigate } from 'react-router-dom'
+import { RouterProvider } from 'react-router-dom'
 import { router } from './router/router'
 import { useAppDispatch } from './store/hooks'
 import { getTokenFromLocalStorage } from './helpers/localstorage.helper'

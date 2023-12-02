@@ -1,5 +1,3 @@
-import dateFormat from "dateformat"
-
 export const dateDifference = (date:  string) => {
     const currentDate = new Date().getDate()
     const taskDateConv = new Date(date).getDate()

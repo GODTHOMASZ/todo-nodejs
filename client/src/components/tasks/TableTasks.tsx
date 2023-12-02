@@ -30,6 +30,7 @@ const TableTasks: FC<ITasks> = ({tasks, setTaskId, setVisibleModal, setTasks, se
                       setTaskId(task.id)
                       setVisibleModal(true)
                       setIsPatch(true)
+                      //@ts-ignore
                       setTasks(tasks)
                     }
                   }
