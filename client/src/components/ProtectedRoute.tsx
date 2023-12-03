@@ -13,7 +13,7 @@ export const ProtectedRoute: FC<Props> = ({ children }) => {
 
     return (
     <>
-        {isAuth ? children : useEffect(() => {navigate("/auth")}, [])}
+        {isAuth ? children : useEffect(() => {navigate("/")}, [])}
     </>
     )
 }

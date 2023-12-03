@@ -20,7 +20,7 @@ const Login: FC = () => {
                 setTokenToLocalStorage('token', data.token)
                 dispatch(logIn(data))
                 toast.success('Вход успешно выполнен')
-                window.location.href = '/'
+                window.location.href = '/task'
             }
         } catch (err: any) {
             const error = err.response?.data.message

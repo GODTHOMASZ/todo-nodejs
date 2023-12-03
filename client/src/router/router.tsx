@@ -1,4 +1,4 @@
-import { createBrowserRouter, Navigate } from 'react-router-dom'
+import { createBrowserRouter } from 'react-router-dom'
 import Layout from '../pages/Layout'
 import ErrorPage from '../pages/ErrorPage'
 import Tasks, { tasksAction, tasksLoader } from '../pages/Tasks'
@@ -12,9 +12,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 index: true,
-                element: (<ProtectedRoute>
-                            <Navigate to="task" replace={true} />
-                        </ProtectedRoute>),
+                element: <Auth />
             },
             {
                 path: 'task',
@@ -25,10 +23,6 @@ export const router = createBrowserRouter([
                         <Tasks />
                     </ProtectedRoute>
                     ),
-            },
-            {
-                path: 'auth',
-                element: <Auth />
             }
         ],
         errorElement: <ErrorPage />,

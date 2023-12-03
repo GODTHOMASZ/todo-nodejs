@@ -18,7 +18,7 @@ const Header: FC = () => {
         dispatch(logOut())
         removeTokenFromLocalStorage('token')
         toast.success('Вы вышли из системы')
-        navigate('auth')
+        navigate('/')
     }
 
 

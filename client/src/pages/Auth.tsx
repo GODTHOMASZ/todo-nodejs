@@ -7,9 +7,10 @@ import { Navigate } from 'react-router-dom'
 
 const Auth: FC = () => {
   const [isLogin, setIsLogin] = useState<boolean>(true)
+  
   const isAuth = useAuth()
   return (<>
-            {(isAuth ? (<Navigate to="/" replace={true} />) :
+            {(isAuth ? (<Navigate to="task" />) :
               <div className="mt-40 flex flex-col items-center justify-center">
                 <h1 className="mb-10 text-center text-2xl">
                   {isLogin ? 'Авторизация' : 'Регистрация'}
